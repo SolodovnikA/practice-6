@@ -4,9 +4,10 @@ c, d, e = map(int, input('Введите размер кирпича: ').split('
 brick_v = [c, d, e]
 brick_v.remove(max(brick_v))
 
-brick_s = brick_v[0]*brick_v[1]
+d_hole = (a**2 + b**2)**0.5
+d_brick = ((brick_v[0])**2 + (brick_v[1])**2)**0.5
 
-if (a * b) > brick_s:
+if d_hole > d_brick:
     print('Да')
 else:
     print('Нет')
