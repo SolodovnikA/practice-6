@@ -1,9 +1,10 @@
 n, k, m = map(int, input().split())
 time = 0
 
-while n > k:
-    time += m
-    n -= k
-
-time += m
-print(time * 2)
+time += m * (n // k) * 2
+if n % k != 0:
+    if k // (n % k) >= 2:
+        time += m
+    else:
+        time += m * 2
+print(time)
